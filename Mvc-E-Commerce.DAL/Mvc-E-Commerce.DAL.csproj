@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201912180903461_firstSetup.Designer.cs">
       <DependentUpon>201912180903461_firstSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912211318112_categoryData.cs" />
+    <Compile Include="Migrations\201912211318112_categoryData.Designer.cs">
+      <DependentUpon>201912211318112_categoryData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mvc-E-CommerceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912180903461_firstSetup.resx">
       <DependentUpon>201912180903461_firstSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912211318112_categoryData.resx">
+      <DependentUpon>201912211318112_categoryData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

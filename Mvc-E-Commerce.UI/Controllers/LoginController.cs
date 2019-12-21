@@ -13,5 +13,9 @@ namespace Mvc_E_Commerce.UI.Controllers
         {
             return View();
         }
+        public ActionResult UserAdd()
+        {
+            return View();
+        }
     }
 }

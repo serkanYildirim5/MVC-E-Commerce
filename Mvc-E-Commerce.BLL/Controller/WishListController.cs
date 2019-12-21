@@ -35,9 +35,6 @@ namespace Mvc_E_Commerce.BLL.Controller
         {
             if (WishList != null && yeniWishList != null)
             {
-                if (WishListManagment.UpdateWishList(WishList)==) {
-
-                };
 
                 WishListManagment.ChangeWishList(WishList, yeniWishList);
                 WishListManagment.WishListChangeSave();

@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mvc_E_Commerce.UI</RootNamespace>
     <AssemblyName>Mvc-E-Commerce.UI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -26,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,16 +53,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -103,6 +102,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -255,6 +255,7 @@
     <Content Include="Content\img\i6.jpg" />
     <Content Include="Content\img\i7.jpg" />
     <Content Include="Content\img\i8.jpg" />
+    <Content Include="Content\img\kayitbuton.png" />
     <Content Include="Content\img\l1.jpg" />
     <Content Include="Content\img\l2.jpg" />
     <Content Include="Content\img\l3.jpg" />
@@ -442,6 +443,7 @@
     <Content Include="Views\Cart\Cart.cshtml" />
     <Content Include="Views\Home\SingleProduct.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\UserAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -450,6 +452,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mvc-E-Commerce.BLL\Mvc-E-Commerce.BLL.csproj">
+      <Project>{A3372326-27EA-4285-BB73-86D1BC023890}</Project>
+      <Name>Mvc-E-Commerce.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mvc-E-Commerce.Entity\Mvc-E-Commerce.Entity.csproj">
+      <Project>{886F786D-27C3-4612-9B57-0E2BA9812A54}</Project>
+      <Name>Mvc-E-Commerce.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

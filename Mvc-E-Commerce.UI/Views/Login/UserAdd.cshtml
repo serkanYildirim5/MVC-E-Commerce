@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "UserAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Login/Register</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="category.html">Login/Register</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8">            
+            <h3 class="mb-30">KAYIT OL</h3>
+            @Html.ValidationSummary()
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>
+                            <label>First Name: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Last Name: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>User Name: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="text" name="last_name" placeholder="User Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="password" name="Password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Phone: </label>
+                        </td>
+                        <td>
+                            <div class="mt-10">
+                                <input type="text" name="Phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+                                       required class="single-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Address: </label>
+                        </td>
+                        <td>
+                            <div class="input-group-icon mt-10">
+                                <div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+                                <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'"
+                                       required class="single-input">
+                            </div>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           
+                        </td>
+                        <td>
+                            <div>
+                                <a href="#" class="genric-btn primary">Kayıt Ol</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>    
+                </div>
+        </div>
+</div>
