@@ -79,9 +79,9 @@
     <Compile Include="Controller\BasketController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
     <Compile Include="Controller\CommentController.cs" />
+    <Compile Include="Controller\MembershipTools.cs" />
     <Compile Include="Controller\OrderController.cs" />
     <Compile Include="Controller\ProductController.cs" />
-    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\WishListController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
