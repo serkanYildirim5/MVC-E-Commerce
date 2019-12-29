@@ -14,10 +14,6 @@ namespace Mvc_E_Commerce.Entity.DTO
         [StringLength(25)]
         public string Name { get; set; }
         [Required]
-        [Display(Name = "Soyad")]
-        [StringLength(35)]
-        public string Surname { get; set; }
-        [Required]
         [Display(Name = "Kullanıcı Adı")]
         public string UserName { get; set; }
         [Required]

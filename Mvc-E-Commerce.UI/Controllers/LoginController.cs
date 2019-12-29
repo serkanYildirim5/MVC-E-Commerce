@@ -35,7 +35,7 @@ namespace Mvc_E_Commerce.UI.Controllers
                 var roleManager = NewRoleManager();
 
                 var user = await userManager.FindByNameAsync(model.UserName);
-                if (user == null)
+                if (user != null)
                 {
                     ModelState.AddModelError("UserName", "Bu kullanıcı adı daha önceden alınmıştır");
                     return View("Index", model);
