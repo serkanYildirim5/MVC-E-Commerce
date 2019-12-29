@@ -13,6 +13,11 @@ namespace Mvc_E_Commerce.Entity.IdentityModels
         [StringLength(50)]
         [Required]
         public string Name { get; set; }
-
+        [StringLength(250)]
+        [Required]
+        public string Email { get; set; }
+        [StringLength(250)]
+        [Required]
+        public string UserName { get; set; }
     }
 }

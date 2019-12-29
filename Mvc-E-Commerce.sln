@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc-E-Commerce.UI", "Mvc-E-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc-E-Commerce.Helpers", "Mvc-E-Commerce.Helpers\Mvc-E-Commerce.Helpers.csproj", "{F7B1F72D-388B-474B-99F9-33322235BAF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc-E-Commerce.API", "Mvc-E-Commerce.API\Mvc-E-Commerce.API.csproj", "{5EC4BA1D-4AFE-4C7F-95D5-9B8C9163CAAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F7B1F72D-388B-474B-99F9-33322235BAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B1F72D-388B-474B-99F9-33322235BAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B1F72D-388B-474B-99F9-33322235BAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC4BA1D-4AFE-4C7F-95D5-9B8C9163CAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC4BA1D-4AFE-4C7F-95D5-9B8C9163CAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC4BA1D-4AFE-4C7F-95D5-9B8C9163CAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC4BA1D-4AFE-4C7F-95D5-9B8C9163CAAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,6 +16,7 @@ namespace Mvc_E_Commerce.DAL.Migrations
 
         protected override void Seed(Mvc_E_Commerce.DAL.Mvc_E_CommerceContext context)
         {
+            //Database.SetInitializer<Mvc_E_CommerceContext>(new DropCreateDatabaseIfModelChanges<Mvc_E_CommerceContext>());
             List<Category> kt = new List<Category>() {
                 new Category(){CategoryName="Araba"},
                 new Category(){CategoryName="Giyim"},

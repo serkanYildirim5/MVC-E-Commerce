@@ -1,4 +1,5 @@
-﻿using Mvc_E_Commerce.Entity.DTO;
+﻿using Microsoft.AspNet.Identity;
+using Mvc_E_Commerce.Entity.DTO;
 using Mvc_E_Commerce.Entity.IdentityModels;
 using System;
 using System.Collections.Generic;
@@ -45,8 +46,8 @@ namespace Mvc_E_Commerce.UI.Controllers
                     UserName = model.UserName,
                     Email = model.Email,
                     Name = model.Name
-
                 };
+                //ümit hocaya extensions sorr
                 var result = await userManager.CreateAsync(newUser, model.Password);
                 if (result.Succeeded)
                 {
@@ -76,6 +77,42 @@ namespace Mvc_E_Commerce.UI.Controllers
                return RedirectToAction("Error","Home");
             }
 
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> LoginControl(LoginDTO loginDTO)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View("Index", loginDTO);
+                }
+                var userManager = NewUserManager();
+                var user =userManager.Find(loginDTO.UserName,loginDTO.Password);
+                if (user==null)
+                {
+                    ModelState.AddModelError("","Kullanıcı Adı veya şifre hatalı");
+                }
+                var authManager = HttpContext.GetOwinContext().Authentication;
+                var userIdentity = await userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties() {
+                    IsPersistent=loginDTO.RememberMe//tarayıcının bizi hatırlaması için
+                },userIdentity);
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+           
+        }
+        [HttpGet]
+        public ActionResult LogOut()
+        {
+            var authManager = HttpContext.GetOwinContext().Authentication;
+            authManager.SignOut();
+            return RedirectToAction("Login");
         }
     }
 }

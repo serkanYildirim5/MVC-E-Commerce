@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Mvc_E_Commerce.BLL.Controller
 {
@@ -24,5 +25,27 @@ namespace Mvc_E_Commerce.BLL.Controller
             return new RoleManager<Role>(NewRoleStore());
         }
 
+        public static string GetName(string userId)
+        {
+            User user;
+            if (string.IsNullOrEmpty(userId))
+            {
+              var id= HttpContext.Current.User.Identity.GetUserId();
+                if (string.IsNullOrEmpty(id))
+                {
+                    return "";
+                }
+              user= NewUserManager().FindById(id);
+            }
+            else
+            {
+                user= NewUserManager().FindById(userId);
+                if (user==null)
+                {
+                    return null;
+                }
+            }
+            return $"{user.Name}";
+        }
     }
 }

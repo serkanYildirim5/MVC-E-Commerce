@@ -3,6 +3,25 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+    @*<script type="text/javascript">
+        $(function () {
+            $("#buttonLogin").on("click", function () {
+                var userName = $(".UserName").val();
+                var destUrl = "/";
+                $.ajax({
+                    url: destUrl,
+                    type: "GET",
+                    success: function (response) {
+                        alert(response);
+                    },
+                    error: function (o) {
+                        alert(o);
+                    }
+                });
+            });
+        });
+    </script>*@
 <!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
     <div class="container">
@@ -35,21 +54,22 @@
             <div class="col-lg-6">
                 <div class="login_form_inner">
                     <h3>Log in to enter</h3>
-                    @using (Html.BeginForm("LoginControl", "Login", FormMethod.Post,new {@class= "row login_form" }))
+                    @using (Html.BeginForm("LoginControl", "Login", FormMethod.Post, new { @class = "row login_form" }))
                     {
+                        @Html.AntiForgeryToken()
                         <div class=" col-md-12 form-group">
                             @Html.LabelFor(x=>x.UserName,new {@class="form-control" })
                             @Html.TextBoxFor(x => x.UserName, new { @class = "form-control",placeholder="Kullanıcı Adı" })
                         </div>
                         <div class="col-md-12 form-group">
                             @Html.LabelFor(x => x.Password, new { @class = "form-control" })
-                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "Şifre" })
+                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "Şifre" ,@type="password"})
                         </div>
                         <div class="col-md-12 form-group">
                             <label>@Html.CheckBoxFor(x => x.RememberMe) Beni Hatırla</label>
                            
                         </div>
-                        <button type="submit" class="primary-btn">Giriş Yap</button>
+                        <button type="submit" id="buttonLogin" class="primary-btn">Giriş Yap</button>
                     }
                     
                 </div>

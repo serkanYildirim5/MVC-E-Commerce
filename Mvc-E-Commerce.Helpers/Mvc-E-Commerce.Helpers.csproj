@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mvc_E_Commerce.Helpers</RootNamespace>
     <AssemblyName>Mvc-E-Commerce.Helpers</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,24 @@
   <ItemGroup>
     <Compile Include="Extensions\RegisterExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mvc-E-Commerce.BLL\Mvc-E-Commerce.BLL.csproj">
+      <Project>{a3372326-27ea-4285-bb73-86d1bc023890}</Project>
+      <Name>Mvc-E-Commerce.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mvc-E-Commerce.DAL\Mvc-E-Commerce.DAL.csproj">
+      <Project>{bcd087f3-b30a-4a43-82e5-11b3f244d0cd}</Project>
+      <Name>Mvc-E-Commerce.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mvc-E-Commerce.Entity\Mvc-E-Commerce.Entity.csproj">
+      <Project>{886F786D-27C3-4612-9B57-0E2BA9812A54}</Project>
+      <Name>Mvc-E-Commerce.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mvc-E-Commerce.UI\Mvc-E-Commerce.UI.csproj">
+      <Project>{4c52aa22-c6ab-4801-98b0-f0ae0c32dae6}</Project>
+      <Name>Mvc-E-Commerce.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
